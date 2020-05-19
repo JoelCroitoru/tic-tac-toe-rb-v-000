@@ -85,9 +85,7 @@ return false
 end
 #This method accepts a board and returns true if every element board contains an "X" or "O":
 def full?(board)
-  board.all? do|index|
-    index == "X"||index=="O"
-  end
+  board.all? {|index| index == "X"||index=="O"}
 end
 #This accepts a board and returns true if board has not been won and full, false if board has not been won and not full,
 # and false if board is won:
